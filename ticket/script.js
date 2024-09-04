@@ -20,17 +20,32 @@ const ticketGeral = (atendimento) => {
     }}
     if(!atendimentoG || atendimentoI !== atendimentoP){
         for(let geral = 0; geral< atendimentoG.length; geral++){
-            atnGeral += "<li>GE20" + atendimentoG[geral] + "</li>"        
-        }
-    }
+            atnGeral += "<li>GR20" + atendimentoG[geral] + "</li>"        
+    }}
     document.getElementById("senha").innerHTML = atnGeral
 }
 const geral = () => {
-    ticketGeral(atendimentoG, "G");
+    ticketGeral(atendimentoG);
 }
 const prefencial = () => {
     ticketGeral(atendimentoP);
 }
 const idoso = () => {
     ticketGeral(atendimentoI);
+}
+
+const atendente = () => {
+    let atnGeral = "";
+    console.log("atnGeral: ", atnGeral);
+
+    for (let geral = 0; geral < atendimentoI.length; geral++) {
+        atnGeral += "<li>ID00" + atendimentoI[geral] + "</li>";
+    }
+    for (let geral = 0; geral < atendimentoP.length; geral++) {
+        atnGeral += "<li>PR10" + atendimentoP[geral] + "</li>";
+    }
+    for (let geral = 0; geral < atendimentoG.length; geral++) {
+        atnGeral += "<li>GR20" + atendimentoG[geral] + "</li>";
+    }
+    document.getElementById("atendimento").innerHTML = atnGeral;
 }
