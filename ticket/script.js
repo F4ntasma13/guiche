@@ -2,16 +2,14 @@ var atendimentoI = []
 var atendimentoP = []
 var atendimentoG = []
 
-var quantidade = 1
 var contador = 0
 
 const ticketGeral = (atendimento) => {
     let atnGeral = ""
-    for(let tick = 0; tick < quantidade; tick++){
-        contador++
-        let numeroAtendimento = contador.toString()
-        atendimento.push(numeroAtendimento)
-    }
+    contador++
+    let numeroAtendimento = contador.toString()
+    atendimento.push(numeroAtendimento)
+
     if(!atendimentoI || atendimentoP !== atendimentoG){
         for(let geral = 0; geral< atendimentoI.length; geral++){
         atnGeral += "<li>ID00" + atendimentoI[geral] + "</li>"        
