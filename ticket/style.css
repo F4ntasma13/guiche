@@ -50,13 +50,21 @@ button {
 button:hover {
     background-color: #0056b3;
 }
-#senha {
+#senha,
+#concluido,
+#atendimento,
+#atendimento2,
+#atendimento3 {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#senha li {
+#senha li,
+#concluido li,
+#atendimento li,
+#atendimento2 li,
+#atendimento3 li {
     background-color: #f8f8f8;
     border: 1px solid #ccc;
     padding: 10px;
@@ -69,7 +77,11 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#senha li:before {
+#senha li:before,
+#concluido li:before,
+#atendimento li:before,
+#atendimento2 li:before,
+#atendimento3 li:before {
     content: "Senha ";
     font-weight: bold;
     color: #386391;
