@@ -10,28 +10,26 @@ const gerarTicket = (ticket, prefixo) =>{
     let lista = ""
     for(let tick = 0; tick < ticket.length; tick++){
         lista += "<li>" + prefixo + ticket[tick] + "</li>"
-        console.log("ticket[tick]: ", ticket[tick]);
     }
     return lista
 }
 const ticketGeral = (atendimento, prefixo) => {
-    listaGeral = ""
+    listaGr = ""
     contador++
     let numeroAtendimento = contador.toString()
     atendimento.push(numeroAtendimento)
 
-    listaGeral += gerarTicket(atendimentoG, prefixo)    
-
-    document.getElementById("senha").innerHTML = listaGeral
+    listaGr += gerarTicket(atendimentoG, prefixo)    
+    document.getElementById("senha").innerHTML = listaGr
 }
 const ticketIdoso = (atendimento, prefixo) => {
-    listaIdoso = ""
+    listaId = ""
     contador++
     let numeroAtendimento = contador.toString()
     atendimento.push(numeroAtendimento)
 
-    listaIdoso += gerarTicket(atendimentoI, prefixo)  
-    document.getElementById("idoso").innerHTML = listaIdoso
+    listaId += gerarTicket(atendimentoI, prefixo)  
+    document.getElementById("idoso").innerHTML = listaId
 }
 const ticketPreferencial = (atendimento, prefixo) => {
     listaPr = ""
