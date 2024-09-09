@@ -51,6 +51,8 @@ button:hover {
     background-color: #0056b3;
 }
 #senha,
+#idoso,
+#preferencial,
 #concluido,
 #atendimento,
 #atendimento2,
@@ -61,6 +63,8 @@ button:hover {
 }
 
 #senha li,
+#idoso li,
+#preferencial li,
 #concluido li,
 #atendimento li,
 #atendimento2 li,
@@ -78,6 +82,8 @@ button:hover {
 }
 
 #senha li:before,
+#idoso li:before,
+#preferencial li:before,
 #concluido li:before,
 #atendimento li:before,
 #atendimento2 li:before,
