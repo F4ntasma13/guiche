@@ -1,16 +1,16 @@
-var listaGeral = ""
 var contador = 0
 var atendimentoG = []
 var atendimentoI = []
 var atendimentoP = []
 var clientesAtendidos = []
+const reload = () => location.reload()
 
 
 const gerarTicket = (ticket, prefixo) =>{
     let lista = ""
-    console.log("lista: ", lista);
     for(let tick = 0; tick < ticket.length; tick++){
         lista += "<li>" + prefixo + ticket[tick] + "</li>"
+        console.log("ticket[tick]: ", ticket[tick]);
     }
     return lista
 }
@@ -45,6 +45,7 @@ const ticketPreferencial = (atendimento, prefixo) => {
 
 const geral = () => {
     ticketGeral(atendimentoG, "GR00");
+
 }
 const preferencial = () => {
     ticketPreferencial(atendimentoP, "PR00");
@@ -53,7 +54,7 @@ const idoso = () => {
     ticketIdoso(atendimentoI, "ID00");
 }
 
-const guicheOne = (atendimento) => {
+const guicheOne = () => {
     atendimentos("atendimento")
     if(clientesAtendidos.length > 0){
         mostrarAtendidos("concluido")
@@ -71,10 +72,9 @@ const guicheTree = () => {
         mostrarAtendidos("concluido")
     }
 }
-
 const atendimentos = (elementId) => {
     let atnGeral = ""
- 
+    
     if (atendimentoI.length > 0) {
         let atendidos = atendimentoI[0]
         atnGeral += "<li>ID00" + atendidos + "</li>"
@@ -113,5 +113,4 @@ const mostrarAtendidos = (elementId) => {
         listaAtendidos += "<li>" + clientesAtendidos[concluido] + "</li>"
     }
     document.getElementById(elementId).innerHTML = listaAtendidos
-
 }
