@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="imagens/hospital-logo-design-vector-medical-cross.png" alt="Logo do Hospital">
+        </div>
     <h1>Atendimento Geral</h1>
 
     <div class="container">
@@ -18,9 +22,12 @@
                 <button onclick="preferencial()">Preferencial</button>
             </div>
             <div>
-                <ul id="senha">Gerar senha</ul>
-                <ul id="idoso">Gerar senha Idoso</ul>
-                <ul id="preferencial">Gerar senha Preferencial</ul>
+                <p>Geral</p>
+                <ul id="senha"></ul>
+                <p>Idoso</p>
+                <ul id="idoso"></ul>
+                <p>Preferencial</p>
+                <ul id="preferencial"></ul>
             </div>
           
         </div>
@@ -46,6 +53,10 @@
         </div>
     </div>
     <button onclick="reload()">Atualizar</button>
+    <footer>
+        <p>&copy; 2024 Sistema de Ticket. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Pedro Dev</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
