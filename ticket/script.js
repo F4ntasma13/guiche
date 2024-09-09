@@ -5,49 +5,67 @@ var atendimentoI = []
 var atendimentoP = []
 var clientesAtendidos = []
 
+
+const gerarTicket = (ticket, prefixo) =>{
+    let lista = ""
+    console.log("lista: ", lista);
+    for(let tick = 0; tick < ticket.length; tick++){
+        lista += "<li>" + prefixo + ticket[tick] + "</li>"
+    }
+    return lista
+}
 const ticketGeral = (atendimento, prefixo) => {
     listaGeral = ""
     contador++
-    console.log("contador: ", contador);
     let numeroAtendimento = contador.toString()
     atendimento.push(numeroAtendimento)
 
-    const gerarTicket = (ticket, ) =>{
-        let lista = ""
-        for(let tick = 0; tick < ticket.length; tick++){
-            lista += "<li>" + prefixo + ticket[tick] + "</li>"
-        }
-        return lista
-    }
-    listaGeral = gerarTicket(atendimentoI)  + gerarTicket(atendimentoP) + gerarTicket(atendimentoG)
-    
+    listaGeral += gerarTicket(atendimentoG, prefixo)    
 
     document.getElementById("senha").innerHTML = listaGeral
+}
+const ticketIdoso = (atendimento, prefixo) => {
+    listaIdoso = ""
+    contador++
+    let numeroAtendimento = contador.toString()
+    atendimento.push(numeroAtendimento)
+
+    listaIdoso += gerarTicket(atendimentoI, prefixo)  
+    document.getElementById("idoso").innerHTML = listaIdoso
+}
+const ticketPreferencial = (atendimento, prefixo) => {
+    listaPr = ""
+    contador++
+    let numeroAtendimento = contador.toString()
+    atendimento.push(numeroAtendimento)
+
+    listaPr += gerarTicket(atendimentoP, prefixo)  
+    document.getElementById("preferencial").innerHTML = listaPr
 }
 
 const geral = () => {
     ticketGeral(atendimentoG, "GR00");
 }
 const preferencial = () => {
-    ticketGeral(atendimentoP, "PR00");
+    ticketPreferencial(atendimentoP, "PR00");
 }
 const idoso = () => {
-    ticketGeral(atendimentoI, "ID00");
+    ticketIdoso(atendimentoI, "ID00");
 }
 
-const atendenteOne = () => {
+const guicheOne = (atendimento) => {
     atendimentos("atendimento")
     if(clientesAtendidos.length > 0){
         mostrarAtendidos("concluido")
     }
 }
-const atendenteTwo = () => {
+const guicheTwo = () => {
     atendimentos("atendimento2")
     if(clientesAtendidos.length > 0){
         mostrarAtendidos("concluido")
     }
 }
-const atendenteTree = () => {
+const guicheTree = () => {
     atendimentos("atendimento3")
     if(clientesAtendidos.length > 0){
         mostrarAtendidos("concluido")
@@ -66,7 +84,6 @@ const atendimentos = (elementId) => {
         }
         atendimentoI.length = atendimentoI.length - 1
         clientesAtendidos.push("ID00" + atendidos)
-
     }
     else if (atendimentoP.length > 0) {
         let atendidos = atendimentoP[0]
@@ -96,4 +113,5 @@ const mostrarAtendidos = (elementId) => {
         listaAtendidos += "<li>" + clientesAtendidos[concluido] + "</li>"
     }
     document.getElementById(elementId).innerHTML = listaAtendidos
+
 }
