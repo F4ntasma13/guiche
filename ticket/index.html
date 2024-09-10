@@ -13,6 +13,7 @@
         </div>
     <h1>Atendimento Geral</h1>
 
+
     <div class="container">
         <div class="coluna">
             <h3>Aguardando atendimento</h3>
@@ -22,11 +23,8 @@
                 <button onclick="preferencial()">Preferencial</button>
             </div>
             <div>
-                <p>Geral</p>
                 <ul id="senha"></ul>
-                <p>Idoso</p>
                 <ul id="idoso"></ul>
-                <p>Preferencial</p>
                 <ul id="preferencial"></ul>
             </div>
           
@@ -35,15 +33,18 @@
             <h3>Atendimento</h3>
             <p>Guiché 1</p>
             <ul id="atendimento">Status: disponivel</ul>
-            <button onclick="guicheOne()">Atender</button></br></br></br>
+            <div id="botao-container"></div>
+            <!-- <button onclick="guicheOne()">Atender</button></br></br></br> -->
 
             <p>Guiché 2</p>
             <ul id="atendimento2">Status: disponivel</ul>
-            <button onclick="guicheTwo()">Atender</button></br></br></br>
+            <div id="botao-container2"></div>
+            <!-- <button onclick="guicheTwo()">Atender</button></br></br></br> -->
 
             <p>Guiché 3</p>
             <ul id="atendimento3">Status: disponivel</ul>
-            <button onclick="guicheTree()">Atender</button></br></br></br>
+            <div id="botao-container3"></div>
+            <!-- <button onclick="guicheTree()">Atender</button></br></br></br> -->
 
         </div>
         
@@ -52,8 +53,12 @@
             <ul id="concluido">Nenhum cliente em atendimento</ul>
         </div>
     </div>
-    <button onclick="reload()">Atualizar</button>
+    <button onclick="logar()">Login</button>
+    <button onclick="deslogar()">Logout</button>
     <footer>
+        <div class="logo">
+            <img src="imagens/hospital-logo-design-vector-medical-cross.png" alt="Logo do Hospital">
+        </div>
         <p>&copy; 2024 Sistema de Ticket. Todos os direitos reservados.</p>
         <p>Desenvolvido por Pedro Dev</p>
     </footer>

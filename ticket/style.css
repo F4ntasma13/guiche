@@ -2,7 +2,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #e0f7fa;
 }
-
+header .logo img {
+    height: 50px;
+}
 h1 {
     text-align: center;
     color: #00796b;
@@ -32,14 +34,12 @@ h3 {
     color: #00796b;
 
 }
-
 .botao-grupo {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin-bottom: 10px;
 }
-
 button {
     flex: 1;
     margin: 5px;
@@ -56,7 +56,23 @@ button {
 button:hover {
     background-color: #388e3c;
 }
-
+p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #00796b;
+    text-align: center;
+    margin: 10px 0;
+}
+.coluna p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    border: 1px solid #b2dfdb;
+    border-radius: 5px;
+    background-color: #e0f2f1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 #senha,
 #idoso,
 #preferencial,
@@ -68,7 +84,6 @@ button:hover {
     padding: 0;
     margin: 0;
 }
-
 #senha li,
 #idoso li,
 #preferencial li,
@@ -87,7 +102,6 @@ button:hover {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
 #senha li:before,
 #idoso li:before,
 #preferencial li:before,
@@ -99,40 +113,18 @@ button:hover {
     font-weight: bold;
     color: #00796b;
 }
-p {
-    font-size: 16px;
-    font-weight: bold;
-    color: #00796b;
-    text-align: center;
-    margin: 10px 0;
-}
-
-
-.coluna p {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 8px;
-    border: 1px solid #b2dfdb;
-    border-radius: 5px;
-    background-color: #e0f2f1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 footer {
     background-color: #004d40;
     color: #fff;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
     width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 80px;
+    margin-top: 330px;
 }
-
 footer p {
     margin: 5px 0;
     font-size: 14px;
 }
-header .logo img {
-    height: 80px;
-}
+
 
