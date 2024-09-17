@@ -23,6 +23,10 @@ const logar = () => {
         document.getElementById("botao-container3").innerHTML = 
         "<button class='botoes' onclick='guicheTree()' id= 'atenderBtn' disabled>Atender</button>"
     }
+    let botoesAtn = document.getElementsByClassName("botoesAtendimento")
+    for(let d = 0; d < botoesAtn.length; d++){
+        botoesAtn[d].disabled = false
+    }
     document.getElementById("atendimento").innerHTML = "Status: logado"
     document.getElementById("atendimento2").innerHTML = "Status: logado"
     document.getElementById("atendimento3").innerHTML = "Status: logado"  
